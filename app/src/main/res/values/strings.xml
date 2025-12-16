@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Submission1</string>
+    <string name="app_name">The Game Awards</string>
+    <string name="award_image">Award Image</string>
 
     <string-array name="award_category">
         <item>Best Family Game</item>
@@ -11,7 +12,7 @@
         <item>Best Independent Game</item>
         <item>Best Adaptation</item>
         <item>Best Action Game</item>
-        <item>Best Peformance</item>
+        <item>Best Performance</item>
         <item>Games for Impact</item>
         <item>Best Ongoing Game</item>
         <item>Best Audio Design</item>
@@ -28,7 +29,7 @@
         <item>Best Community Support</item>
         <item>Best VR/AR Game</item>
         <item>Best RPG</item>
-        <item>Player's Voice</item>
+        <item>Player\'s Voice</item>
         <item>Best Narrative</item>
         <item>Best Multiplayer</item>
         <item>Best Game Direction</item>
@@ -47,7 +48,7 @@
         <item>Hades II</item>
         <item>Jennifer English (Expedition 33)</item>
         <item>South of Midnight</item>
-        <item>No Man's Sky</item>
+        <item>No Man\'s Sky</item>
         <item>Battlefield 6</item>
         <item>MoistCr1TiKaL</item>
         <item>Fatal Fury: City of the Wolves</item>
@@ -59,7 +60,7 @@
         <item>Clair Obscur: Expedition 33</item>
         <item>Clair Obscur: Expedition 33 (Lorien Testard)</item>
         <item>Mario Kart World</item>
-        <item>Baldur's Gate 3</item>
+        <item>Baldur\'s Gate 3</item>
         <item>The Midnight Walk</item>
         <item>Clair Obscur: Expedition 33</item>
         <item>Wuthering Waves</item>
