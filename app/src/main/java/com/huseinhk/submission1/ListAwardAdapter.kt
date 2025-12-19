@@ -1,29 +1,48 @@
 package com.huseinhk.submission1
 
-import android.view.View
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.huseinhk.submission1.databinding.ItemRowAwardBinding
 
-class ListAwardAdapter(private val listAward: ArrayList<Award>): RecyclerView.Adapter<ListAwardAdapter.ListViewHolder>() {
+class ListAwardAdapter(private val listAward: ArrayList<Award>) :
+    RecyclerView.Adapter<ListAwardAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ListViewHolder {
-        TODO("Not yet implemented")
+        val binding =
+            ItemRowAwardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(
         holder: ListViewHolder,
         position: Int
     ) {
-        TODO("Not yet implemented")
+        val (category, title, image) = listAward[position]
+        holder.binding.imgItemPhoto.setImageResource(image)
+        holder.binding.tvItemCategory.text = category
+        holder.binding.tvItemTitle.text = title
+
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listAward[holder.bindingAdapterPosition]) }
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+    override fun getItemCount(): Int = listAward.size
+
+    class ListViewHolder(var binding: ItemRowAwardBinding) : RecyclerView.ViewHolder(binding.root) {
+        val imgPhoto = binding.imgItemPhoto
+        val tvCategory = binding.tvItemCategory
+        val tvTitle = binding.tvItemTitle
     }
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Award)
     }
 }

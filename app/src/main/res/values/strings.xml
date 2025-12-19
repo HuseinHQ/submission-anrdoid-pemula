@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">The Game Awards</string>
+    <string name="app_name">The Game Awards 2025</string>
     <string name="award_image">Award Image</string>
+    <string name="award_category">Award Category</string>
+    <string name="award_title">Award Title</string>
 
     <string-array name="award_category">
         <item>Best Family Game</item>
